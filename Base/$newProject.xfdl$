@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="newProject" width="700" height="670" titletext="New Form">
+    <Layouts>
+      <Layout height="670" mobileorientation="landscape" width="700">
+        <Div id="Div00" taborder="0" left="0" top="0" right="0" bottom="0">
+          <Layouts>
+            <Layout>
+              <Static id="Static00" taborder="0" text="Dự Án Mới" left="0" top="0" width="117" height="28" font="normal 18pt/normal &quot;Arial&quot;"/>
+              <Div id="Div00" taborder="1" left="36" top="38" width="628" height="50" text="">
+                <Layouts>
+                  <Layout>
+                    <Edit id="Edit00" taborder="0" left="0" top="19" width="100.00%" height="31" borderRadius="5px"/>
+                    <Static id="Static01" taborder="1" text="Tiêu Đề Dự Án" left="0" top="0" width="81" height="14"/>
+                  </Layout>
+                </Layouts>
+              </Div>
+              <Div id="Div00_00" taborder="2" left="36" top="95" width="40.00%" height="50" text="">
+                <Layouts>
+                  <Layout>
+                    <Static id="Static01" taborder="1" text="Chủ sỡ hữu" left="0" top="0" width="81" height="14"/>
+                    <Combo id="Combo00" taborder="1" text="Combo00" left="0" top="17" width="100.00%" height="33"/>
+                  </Layout>
+                </Layouts>
+              </Div>
+              <Div id="Div00_00_00" taborder="3" left="384" top="95" width="40.00%" height="50" text="">
+                <Layouts>
+                  <Layout>
+                    <Static id="Static01" taborder="1" text="Mẫu" left="0" top="0" width="81" height="14" onclick="Div00_00_00_Static01_onclick"/>
+                    <Combo id="Combo00" taborder="1" text="Combo00" left="0" top="17" width="100.00%" height="33"/>
+                  </Layout>
+                </Layouts>
+              </Div>
+              <Div id="Div00_00_01" taborder="4" left="36" top="160" width="40.00%" height="50" text="">
+                <Layouts>
+                  <Layout>
+                    <Static id="Static01" taborder="1" text="Ngày Bắt Đầu" left="0" top="0" width="81" height="14"/>
+                    <Calendar id="Calendar00" taborder="1" left="0" top="17" width="100.00%" height="33"/>
+                  </Layout>
+                </Layouts>
+              </Div>
+              <Div id="Div00_00_00_00" taborder="5" left="384" top="160" width="40.00%" height="50" text="">
+                <Layouts>
+                  <Layout>
+                    <Static id="Static01" taborder="1" text="Ngày Kết Thúc" left="0" top="0" width="81" height="14"/>
+                    <Calendar id="Calendar00" taborder="1" left="0" top="17" width="100.00%" height="33"/>
+                  </Layout>
+                </Layouts>
+              </Div>
+              <Div id="Div00_00_01_00" taborder="6" left="36" top="230" width="40.00%" height="50" text="">
+                <Layouts>
+                  <Layout>
+                    <CheckBox id="CheckBox00" taborder="0" text="Cài đặt nội dung này thành dự án chặt chẽ" left="0" top="-10" width="100.00%" height="33" onclick="Div00_00_01_00_CheckBox00_onclick"/>
+                  </Layout>
+                </Layouts>
+              </Div>
+              <Div id="Div00_01" taborder="7" left="36" top="263" width="628" height="120" text="">
+                <Layouts>
+                  <Layout>
+                    <Static id="Static01" taborder="1" text="Mô tả" left="0" top="0" width="81" height="14"/>
+                    <TextArea id="TextArea00" taborder="1" left="0" top="22" width="100%" height="98"/>
+                  </Layout>
+                </Layouts>
+              </Div>
+              <Div id="Div00_00_02" taborder="8" left="36" top="390" width="40.43%" height="60" text="">
+                <Layouts>
+                  <Layout>
+                    <Static id="Static01" taborder="1" text="Chủ sỡ hữu" left="0" top="0" width="81" height="14"/>
+                    <Combo id="Combo00" taborder="1" text="Combo00" left="0" top="17" width="100.00%" height="33"/>
+                    <Static id="Static01_00" taborder="2" text="Thêm nhóm mới" left="189" top="0" width="91" height="14"/>
+                  </Layout>
+                </Layouts>
+              </Div>
+              <Div id="Div00_02" taborder="9" left="36" top="460" width="628" height="50" text="">
+                <Layouts>
+                  <Layout>
+                    <Edit id="Edit00" taborder="0" left="0" top="19" width="100.00%" height="31" borderRadius="5px"/>
+                    <Static id="Static01" taborder="1" text="Tiêu Đề Dự Án" left="0" top="0" width="81" height="14"/>
+                  </Layout>
+                </Layouts>
+              </Div>
+              <Div id="Div00_02_00" taborder="10" left="36" top="510" width="628" height="30" text="">
+                <Layouts>
+                  <Layout>
+                    <Static id="Static01" taborder="1" text="Truy Cập Dự Án" left="0" top="0" width="151" height="30" background="url('theme::blue/images/btn_expand.png') no-repeat left center" padding="0px 0px 0px 13px" onclick="Div00_02_00_Static01_onclick" font="normal 14pt/normal &quot;Arial&quot;"/>
+                  </Layout>
+                </Layouts>
+              </Div>
+              <Div id="Div00_02_00_00" taborder="11" left="36" top="542" width="628" height="80" text="" tooltiptype="default" semantictag="article" tooltiptext="aaaaa">
+                <Layouts>
+                  <Layout>
+                    <Radio id="Radio00" taborder="0" left="34" top="8" width="280" height="50" text="" index="-1" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" onitemchanged="Div00_02_00_00_Radio00_onitemchanged" rtl="false" tooltiptype="hover,mouseleave" tooltiptext="aa">
+                      <Dataset id="innerdataset">
+                        <ColumnInfo>
+                          <Column id="codecolumn" size="256"/>
+                          <Column id="datacolumn" size="256"/>
+                        </ColumnInfo>
+                        <Rows>
+                          <Row>
+                            <Col id="codecolumn">1</Col>
+                            <Col id="datacolumn">Riêng tư</Col>
+                          </Row>
+                          <Row>
+                            <Col id="codecolumn">2</Col>
+                            <Col id="datacolumn">Công khai</Col>
+                          </Row>
+                        </Rows>
+                      </Dataset>
+                    </Radio>
+                  </Layout>
+                </Layouts>
+              </Div>
+              <Button id="Button00" taborder="12" text="Thêm" left="36" top="620" width="88" height="34" cssclass="btnAdd" onclick="Button00_onclick"/>
+              <Button id="Button01" taborder="13" text="Hủy" left="171" top="620" width="88" height="34" cssclass="btnAdd"/>
+            </Layout>
+          </Layouts>
+        </Div>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	
+};
+]]></Script>
+  </Form>
+</FDL>
