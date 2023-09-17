@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="add_group_Popup" width="351" height="175" titletext="Form_Popup_Sub" onload="form_onload" border="1px solid #9c9c9c">
+    <Layouts>
+      <Layout height="175" width="351">
+        <Button id="btn_rtn_obj" taborder="0" text="Tạo nhóm" left="10" top="120" width="104" height="30" onclick="btn_rtn_obj_onclick" borderRadius="24px" color="white" background="#FF6200"/>
+        <Button id="btn_rtn_obj2" taborder="1" text="Hủy" left="125" top="120" height="30" onclick="btn_rtn_obj2_onclick" borderRadius="24px" background="#fff" color="#ff6200" border="1px solid #FF6200" width="70"/>
+        <Static id="Static06" taborder="2" text="Thêm nhóm mới" left="0" top="0" width="347" height="30" cssclass="sta_WF_Subtitle" color="black" onclick="Static06_onclick" background="#FAFAFA" padding="0px 0px 0px 10px" font="normal 700 12pt/normal &quot;Arial&quot;"/>
+        <Static id="des_lbl00" taborder="3" text="Tên nhóm" left="11" top="35" width="90" height="30" color="black" font="normal bold 10pt/normal &quot;Arial&quot;"/>
+        <Edit id="groupNm_txt" taborder="4" left="10" top="70" width="330" height="30"/>
+        <Static id="Static01_01_00" taborder="5" text="*" left="72" top="40" width="90" height="30" font="normal 900 20px/normal &quot;Arial&quot;" color="#ff6200"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_child"/>
+      <Dataset id="ds_user">
+        <ColumnInfo>
+          <Column id="id" type="INT" size="256"/>
+          <Column id="name" type="STRING" size="256"/>
+          <Column id="role" type="STRING" size="256"/>
+          <Column id="status" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="id">1</Col>
+            <Col id="name">NamVH7</Col>
+            <Col id="role">1</Col>
+            <Col id="status">1</Col>
+          </Row>
+          <Row>
+            <Col id="id">2</Col>
+            <Col id="name">SaLT</Col>
+            <Col id="role">1</Col>
+            <Col id="status">1</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_template">
+        <ColumnInfo>
+          <Column id="ID" type="INT" size="256"/>
+          <Column id="Template_name" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="ID">1</Col>
+            <Col id="Template_name">template 1</Col>
+          </Row>
+          <Row>
+            <Col id="ID">2</Col>
+            <Col id="Template_name">template 2</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_group">
+        <ColumnInfo>
+          <Column id="GROUP_ID" type="INT" size="256"/>
+          <Column id="GROUP_NM" type="STRING" size="256"/>
+        </ColumnInfo>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[this.form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	var strParam1 = this.parent.param1;
+	var strParam2 = this.parent.param2;
+	var objParam  = this.parent.param3;
+
+	this.prj_nm.set_value(strParam1);
+	this.Edit01.set_value(strParam2);	
+
+	this.ds_child.copyData(objParam);
+	this.Grid00.set_binddataset("ds_child");
+	this.Grid00.createFormat();
+	
+	this.Grid00.setCellProperty("body", 0, "edittype", "normal");
+	this.Grid00.setCellProperty("body", 1, "edittype", "normal");
+	this.Grid00.setCellProperty("body", 2, "edittype", "normal");
+	this.Grid00.setCellProperty("body", 3, "edittype", "normal");
+		
+};
+
+this.btn_rtn_string_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var strReturn = this.Edit00.value;
+	this.close(strReturn);
+};
+
+this.btn_rtn_obj_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.opener.fn_parent(this.ds_child);
+	this.close();
+};
+
+this.btn_rtn_obj2_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.opener.ds_parent.clearData();
+	var nRow = this.opener.ds_parent.addRow();
+	this.opener.ds_parent.copyRow(nRow, this.ds_child, this.ds_child.rowposition);
+	this.close();
+};
+
+this.fn_popupCallback = function(strPopupID, strReturn)
+{
+	if(strReturn == undefined){
+		return;
+	}
+
+	if(strPopupID == "chf_popup1"){
+		this.alert("Return Value: " + strReturn);
+	}
+};
+]]></Script>
+  </Form>
+</FDL>

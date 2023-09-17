@@ -37,6 +37,22 @@
           </Row>
         </Rows>
       </Dataset>
+      <Dataset id="dsInput">
+        <ColumnInfo>
+          <Column id="USER_LOGIN" type="STRING" size="256"/>
+          <Column id="USER_PW" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="USER_LOGIN">RYU</Col>
+            <Col id="USER_PW">123</Col>
+          </Row>
+        </Rows>
+      </Dataset>
     </Objects>
+    <Bind>
+      <BindItem id="item0" compid="Div00.form.Edit00" propid="value" datasetid="dsInput" columnid="USER_LOGIN"/>
+      <BindItem id="item1" compid="Div00.form.Edit00_00" propid="value" datasetid="dsInput" columnid="USER_PW"/>
+    </Bind>
   </Form>
 </FDL>

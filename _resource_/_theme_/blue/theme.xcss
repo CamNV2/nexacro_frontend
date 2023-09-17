@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<XCSS version="1.0"><![CDATA[/* 
+<XCSS version="1.1">
+  <CSSData><![CDATA[/* 
   nexacro Application Theme
   Name		   : blue.xtheme
   Published        : 2020-04-06
@@ -29,13 +30,36 @@
 	-nexa-border : 1px solid #b7b1b2;
 }
 
-/* Button */
-/* FileDownload */
-/* FileUpload */
-.Button,.FileDownload
+.Button.btnAddTask,
+.Button.btnAddTask[status=focused]
 {
-	background : linear-gradient(to top,#eaeaea,#ffffff);
-	-nexa-border : 1px solid #c2c2c2;
+	background : #ff6400;
+	border-radius : 50px;
+	color: #ffffff;
+}
+.Button.btn-filter, .Button.btn-menu, .Button.btn-filter[status=mouseover],.Button.btn-filter[status=focused], .Button.btn-menu[status=mouseover],.Button.btn-menu[status=focused] {
+	background : #fff;
+	-nexa-border : 0px;
+	
+}.Button.btn-login
+{
+	border-radius : 4px;
+	font : normal 700 10pt/normal "Arial";
+}
+.Button.btn-add-project
+{
+	background : #ff6400;
+	color : #fff;
+	font : normal 700 10pt/normal "Arial";
+	border-radius : 10px;
+	
+}
+
+.Button.btn-add-project[status=mouseover],.Button.btn-add-project[status=focused]{
+	background : #ff6400;
+	color : #fff;
+	font : normal 700 10pt/normal "Arial";
+	border-radius : 10px;
 }
 
 .ButtonControl
@@ -205,7 +229,11 @@
 	background : #ffffff;
 	-nexa-border : 1px solid #d5d5d5;
 }
-
+.Combo.cbx-project-search, .Combo.cbx-project-search[status=mouseover],.Combo.cbx-project-search[status=focused]
+{
+	color: #FF6400;
+	-nexa-border : 0px;
+}
 .Combo[status=mouseover],.Combo[status=focused],.ComboControl[status=mouseover],.ComboControl[status=focused]
 {
 	-nexa-border : 1px solid #5a86cd;
@@ -238,6 +266,11 @@
 	-nexa-icon : URL('theme://images/cmb_WF_Drop_O.png');
 }
 
+.Combo .dropbutton[userstatus=pushed],.Combo .dropbutton[userstatus=selected],.ComboControl .dropbutton[userstatus=pushed],.ComboControl .dropbutton[userstatus=selected]
+{
+	-nexa-icon : URL('theme://images/cmb_WF_Drop_P.png');
+}
+
 .Combo .dropbutton[status=disabled],.ComboControl .dropbutton[status=disabled]
 {
 	opacity : 0.50;
@@ -247,6 +280,7 @@
 {
 	font : 12px "Malgun Gothic";
 	color : #555555;
+	background : #ffffff;
 	-nexa-border : 1px solid #b1b1b1;
 }
 
@@ -257,6 +291,11 @@
 	background : #ffffff;
 	-nexa-border : 1px solid #d5d5d5;
 	-nexa-padding : 1px 9px 0px 9px;
+	font : normal 11px/normal "Oxygen', sans-serif";
+}
+.Edit.input-group{
+	font : normal 11px/normal "Oxygen', sans-serif";
+	border-radius : 0px 4px 4px 0px;
 }
 
 .EditControl
@@ -291,20 +330,36 @@
 {
 	color : #999999;
 }
-/* Grid */
-.Grid
+.Grid .body .row .cell.stat1 .cellbutton,
+.Grid .body .row .cell.stat1 .cellbutton[status=disabled],
+.Grid .body .row .cell.stat1 .cellbutton[status=mouseover],
+.Grid .body .row .cell.stat1 .cellbutton[status=focused]
 {
-	-nexa-border : 2px solid #125dae, 1px solid #b7b1b2, 1px solid #b7b1b2, 1px solid #b7b1b2;
+	color: #ffffff;
+	background : #74cb80;
+	border-radius : 90px;
+	-nexa-border : 0px none;
+	-nexa-text-align : left;
+	-nexa-padding : 4px 0px 4px 8px;
 }
 /* head */
 .Grid .head .row .cell
 {
 	font : bold 12px "Malgun Gothic";
 	color : #2f2f2f;
-	background : linear-gradient(to top, #eff0f0, #f9fafa);
-	-nexa-border : 1px solid #cacaca;
 	-nexa-padding : 4px 4px 4px 4px;
 	-nexa-text-align : center;
+	background : #fff;
+	-nexa-border : 0px none,0px none,1px solid #E4E3E3;
+}
+
+.Grid.grd-project .head .row .cell {
+	font : bold 12px "Malgun Gothic";
+	color : #2f2f2f;
+	-nexa-padding : 4px 4px 4px 4px;
+	-nexa-text-align : center;
+	background : #fff;
+	-nexa-border : 0px none,0px none,1px solid #E4E3E3;
 }
 
 .Grid .head .row .cell[status=disabled]
@@ -312,45 +367,66 @@
 	color : #999999;
 }
 
-.Grid .body .row .cell[status=disabled][userstatus=selected]
+.Grid.grd-project .body .row .cell.info .cellcombo
 {
-	background : #f0f0f0;
+	background : #2cc8ba;
+	color : white;
+	border-radius : 20px;
 }
-/* headcellbutton (Same as ButtonControl) */
-/* headcellcalendar (Same as CalendarControl) */
-/* headcellcheckbox (Same as CheckBoxControl) */
-/* headcellcombo (Same as ComboControl) */
-/* headcelledit (Same as EditControl) */
-/* headcellexpandbutton */
-/* headcellimage (No style applied) */
-/* headcellmaskedit (Same as MaskEditControl) */
-/* headcellprogressbar (Same as ProgressBarControl) */
-/* headcelltextarea (Same as TextAreaControl) */
-/* headcelltreeitem */
-
-/* body */
-.Grid .body .row .cell
+.Grid.grd-project .body .row .cell.info .cellcombo[status=mouseover]
 {
-	color : #666666;
-	-nexa-border : 1px solid #dbdee2;
-	-nexa-padding : 4px 4px 4px 4px;
+	background : #138496;
+	-nexa-border : 1px solid #117a8b;
 }
 
-.Grid .body .row .cell[status=mouseover]
+.Grid.grd-project .body .row .cell.primary .cellcombo
 {
-	background : #f6f6f6;
-}
+	background : #007bff;
+	color : white;
+	border-radius : 20px;
 
-.Grid .body .row .cell[userstatus=selected]
+}
+.Grid.grd-project .body .row .cell.primary .cellcombo[status=mouseover]
 {
-	background : #f2f9ff;
+	background : #0069d9;
+	-nexa-border : 1px solid #0062cc;
 }
-
-.Grid .body .row .cell[status=disabled]
+.Grid.grd-project .body .row .cell.success .cellcombo
 {
-	color : #999999;
-}
+	background : #28a745;
+	color : white;
+	border-radius : 20px;
 
+}
+.Grid.grd-project .body .row .cell.success .cellcombo[status=mouseover]
+{
+	background : #218838;
+	-nexa-border : 1px solid #1e7e34;
+}
+.Grid.grd-project .body .row .cell.cancel .cellcombo{
+	background : #1d2124;
+	color : white;
+	border-radius : 50%;
+	
+}
+.Grid.grd-project .body .row .cell .cellprogressbar{
+	border-radius : 50%;
+}.Grid.grd-project .body .row .cell.cancel .cellcombo[status=mouseover]
+{
+	background : #1d2124;
+	-nexa-border : 1px solid #1d2124;
+}.Grid.grd-project .body .row .cell.inprogress .cellcombo
+{
+	background : #ffc107;
+	color : #212529;
+	border-radius : 20px;
+
+}
+.Grid.grd-project .body .row .cell.inprogress .cellcombo[status=mouseover]
+{
+	background : #e0a800;
+	-nexa-border : 1px solid #e0a800;
+}
 /* subcell (Same as cell) */
 .Grid .body .row .cell .subcell
 {
@@ -595,7 +671,7 @@
 
 .GridCellControl .celltreeitem .treeitembutton[userstatus=expand]
 {
-	-nexa-icon : url('theme://images/btn_WF_Vdec_O.png');
+	-nexa-icon : URL('theme://images/btn_WF_Treeexpand.png');
 }
 
 .GridCellControl .celltreeitem .treeitembutton[userstatus=collapse]
@@ -615,18 +691,12 @@
 
 .GridCellControl .celltreeitem .treeitemimage[userstatus=collapse]
 {
-	-nexa-icon : url('theme://images/img_WF_Treecollapse.png');
+	-nexa-icon : URL('theme://images/img_WF_Treecollapse.png');
 }
 
 .GridCellControl .celltreeline
 {
 	-nexa-border : 1px dotted #909090;
-}
-
-.Grid .body .row .cell[userstatus=blinked]
-{
-    background : #125dae;
-	color : #ffffff;
 }
 
 /* GroupBox */
@@ -666,6 +736,11 @@
 	-nexa-border : 1px solid #d5d5d5;
 }
 
+.ImageViewer.img-login
+{
+	border-radius : 4px 0px 0px 4px;
+	
+}
 .ImageViewer[status=disabled]
 {
 	background : #f2f2f2;
@@ -1029,18 +1104,16 @@
 }
 
 
-/* ProgressBar */
-.ProgressBar,.ProgressBarControl
-{
-	background : #f0f0f0;
-	-nexa-border : 1px solid #aeaeae;
+.ProgressBarControl .progressbaritem{
+	background : #ff6400;
 }
 
-.ProgressBar .progressbaritem,.ProgressBarControl .progressbaritem
+.ProgressBarControl
 {
-	background : #125dae;
+	background : #F0F0F0;
+	-nexa-border : 1px solid #F0F0F0;
+	border-radius : 15px;
 }
-
 .ProgressBar .progressbaritem[status=disabled],.ProgressBarControl .progressbaritem[status=disabled]
 {
 	background : #b5b5b5;
@@ -1048,7 +1121,7 @@
 
 .ProgressBar .progressbartext,.ProgressBarControl .progressbartext
 {
-	color : #ffffff;
+	color: #000000;
 	-nexa-text-align : center;
 }
 
@@ -1200,13 +1273,18 @@
 }
 
 
-/* Static */
-.Static,.StaticControl
+.Div.top-info {
+	background : #ffffff;
+}.Static.main-title
 {
-	/* No style applied */
+	font : normal 400 30px/normal "Passion One";
 }
 
-.Static[status=disabled],.StaticControl[status=disabled]
+.Static.control-label {
+	font : normal 700 10pt/normal "Passion One";
+	color : #fff;
+	
+}.Static[status=disabled],.StaticControl[status=disabled]
 {
 	color : #999999;
 }
@@ -1245,15 +1323,24 @@
 }
 
 
-/* Div (No style applied) */
-/* PopupDiv (No style applied) */
-.Div,.PopupDiv
+.Div.container
 {
-	/* No style applied */
+	background : rgb(235, 235, 235) !important;
+	-nexa-border : 1px solid #c6c6c6;
+	border-radius : 3px;
 }
+.Div.body {
+	background : #fff;
+}
+.Div.main-center{
+	background: linear-gradient(to bottom, #ff6400, #4d1e00);
+	color: #FFF;
+}
+.Div.main-login{
+	border-radius: 2px;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 
-
-/* Tab */
+}/* Tab */
 .Tab
 {
 	/* No style applied */
@@ -2025,12 +2112,50 @@
 .ListView .body .expandbar[userstatus=expand]
 {
 	-nexa-icon : URL('theme://images/btn_expand.png');
-}.Grid .body
+}.Grid .body .row .cell.stat2 .cellbutton,
+.Grid .body .row .cell.stat2 .cellbutton[status=disabled],
+.Grid .body .row .cell.stat2 .cellbutton[status=mouseover],
+.Grid .body .row .cell.stat2 .cellbutton[status=focused]
 {
+	color: #ffffff;
+	background : #08aeea;
+	border-radius : 90px;
+	-nexa-border : 0px none;
+	-nexa-text-align : left;
+	-nexa-padding : 4px 0px 4px 8px;
 }
-.Grid .body .row
+.Grid .body .row .cell.stat3 .cellbutton,
+.Grid .body .row .cell.stat3 .cellbutton[status=disabled],
+.Grid .body .row .cell.stat3 .cellbutton[status=mouseover],
+.Grid .body .row .cell.stat3 .cellbutton[status=focused]
 {
-	-nexa-rtl-background-image : url('theme://images/btn_TF_Close.png');
+	background : transparent;
+	-nexa-border : 0px none;
+	-nexa-text-align : left;
+	-nexa-padding : 4px 0px 4px 8px;
+}
+.Static.sta_RT_title07
+{
+	background : url("imagerc::img_WF_pagingNext.png") no-repeat left center transparent;
+	color : #101010;
+	font : normal 500 10px "Malgun Gothic","Arial";
+	-nexa-border : 0px solid #c7c7c7, 0px solid #c7c7c7, 0px solid #c7c7c7, 0px solid #c7c7c7;
+	-nexa-padding : 0px 0px 0px 25px;
+}
+.Button.btnAddTask[status=mouseover]
+{
+	background : #ffffff;
+	border-radius : 50px;
+	color: #ff6400;
+}
+.Button.isCollapse
+{
+	-nexa-icon : url('theme://images/btn_expand_1.png');
 	
 }
-]]></XCSS>
+.Button
+{
+}
+]]></CSSData>
+  <Predefines/>
+</XCSS>

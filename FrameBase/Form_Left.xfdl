@@ -121,6 +121,8 @@ this.menuTitle_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 		container.set_height(container.form.components.length * 50 + 2);
 		obj.set_cssclass(cssclasses[0] + ",btn_MLF_LmenuS");
 		this.selectedMenu = obj.name;
+	    var path = this.dsMenu.getColumn(this.dsMenu.findRow("id",obj.menuId),"path");
+
 	}
 	
 	this.resetScroll();
@@ -189,6 +191,20 @@ this.menuButton_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
             <Col id="path"/>
           </Row>
           <Row>
+            <Col id="id">40001</Col>
+            <Col id="caption">Báo cáo dự án</Col>
+            <Col id="level">1</Col>
+            <Col id="upid">40000</Col>
+            <Col id="path">Base::Form_Report.xfdl</Col>
+          </Row>
+          <Row>
+            <Col id="id">40002</Col>
+            <Col id="caption">Báo cáo task</Col>
+            <Col id="level">1</Col>
+            <Col id="upid">40000</Col>
+            <Col id="path">Base::ReportTask.xfdl</Col>
+          </Row>
+          <Row>
             <Col id="id">50000</Col>
             <Col id="caption">Lịch</Col>
             <Col id="level">0</Col>
@@ -216,14 +232,14 @@ this.menuButton_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
             <Col id="caption">Tạo dự án</Col>
             <Col id="level">1</Col>
             <Col id="upid">60000</Col>
-            <Col id="path">Base::newProject.xfdl</Col>
+            <Col id="path">Base::addProject.xfdl</Col>
           </Row>
           <Row>
             <Col id="id">20200</Col>
             <Col id="caption">Thông tin dự án</Col>
             <Col id="level">1</Col>
             <Col id="upid">60000</Col>
-            <Col id="path">Base::frm_project.xfdl</Col>
+            <Col id="path">Base::ProjectList.xfdl</Col>
           </Row>
         </Rows>
       </Dataset>
