@@ -35,7 +35,6 @@
 	font : normal 700 14px /normal "Arial";
 	border-radius : 14px;
 	-nexa-padding : 7px 12px;
-
 }
 
 .ButtonControl
@@ -92,12 +91,13 @@
 .Calendar,.CalendarControl
 {
 	background : #ffffff;
-	-nexa-border : 1px solid #d5d5d5;
+	-nexa-border : 1px solid #ecedee;
+	border-radius : 3px;
 }
 
 .Calendar[status=mouseover],.CalendarControl[status=mouseover],.Calendar[status=focused],.CalendarControl[status=focused]
 {
-	-nexa-border : 1px solid #5a86cd;
+	-nexa-border : 1px solid #ff6400;
 }
 
 .Calendar[status=readonly],.CalendarControl[status=readonly]
@@ -118,7 +118,7 @@
 
 .Calendar .dropbutton,.CalendarControl .dropbutton
 {
-	-nexa-icon : URL('theme://images/btn_WF_Calendar.png');
+	-nexa-icon : url('theme://images/btn_WF_Calendar.png');
 }
 
 .Calendar .dropbutton[status=disabled],.CalendarControl .dropbutton[status=disabled]
@@ -170,13 +170,13 @@
 /* CheckBox */
 .CheckBox,.CheckBoxControl
 {
-	-nexa-icon : URL('theme://images/chk_WF_Box.png');
+	-nexa-icon : url('theme://images/chk_WF_Box.png');
 	-nexa-text-padding : 0px 0px 0px 6px;
 }
 
 .CheckBox[status=mouseover],.CheckBoxControl[status=mouseover]
 {
-	-nexa-icon : URL('theme://images/chk_WF_Box_O.png');
+	-nexa-icon : url('theme://images/chk_WF_Box.png');
 }
 
 .CheckBox[status=readonly],.CheckBoxControl[status=readonly]
@@ -186,7 +186,7 @@
 
 .CheckBox[userstatus=selected],.CheckBoxControl[userstatus=selected]
 {
-	-nexa-icon : URL('theme://images/chk_WF_Box_S.png');
+	-nexa-icon : url('theme://images/chk_WF_Box_DS.png');
 }
 
 .CheckBox[status=disabled],.CheckBoxControl[status=disabled]
@@ -202,18 +202,17 @@
 }
 
 
-/* Combo */
-.Combo,.ComboControl
+.Combo .combolist .listboxitem
 {
-	background : #ffffff;
-	-nexa-border : 1px solid #d5d5d5;
+	-nexa-padding : 7px;
+	
 }
 
-.Combo[status=mouseover],.Combo[status=focused],.ComboControl[status=mouseover],.ComboControl[status=focused]
+.Combo .combolist .listboxitem[status=focused]
 {
-	-nexa-border : 1px solid #5a86cd;
+	background : #FF6400;
+	color : #ffffff;
 }
-
 .Combo[status=readonly],.ComboControl[status=readonly]
 {
 	background : #efefef;
@@ -225,47 +224,52 @@
 	background : #efefef;
 }
 
-.Combo .comboedit,.ComboControl .comboedit
+.Combo[status=focused], .Combo[status=mouseover]{
+	-nexa-border : 1px solid #FF6400;	
+}.Combo .comboedit,.ComboControl .comboedit 
 {
 	/* Same as EditControl */
 }
 
 .Combo .dropbutton,.ComboControl .dropbutton
 {
-	-nexa-padding : 1px 2px 0px 0px;
-	-nexa-icon : URL('theme://images/cmb_WF_Drop.png');
+	-nexa-padding : 1px 2px 0px 0px;	
+	-nexa-icon : url('theme://images/cmb_WF_Drop.png');
 }
 
 .Combo .dropbutton[status=mouseover],.Combo .dropbutton[status=focused],.ComboControl .dropbutton[status=mouseover],.ComboControl .dropbutton[status=focused]
 {
-	-nexa-icon : URL('theme://images/cmb_WF_Drop_O.png');
+	-nexa-icon : URL('theme://images/cmb_WF_Drop.png');
 }
 
 .Combo .dropbutton[userstatus=pushed],.Combo .dropbutton[userstatus=selected],.ComboControl .dropbutton[userstatus=pushed],.ComboControl .dropbutton[userstatus=selected]
 {
-	-nexa-icon : URL('theme://images/cmb_WF_Drop_P.png');
+	-nexa-icon : URL('theme://images/cmb_WF_Drop.png');
 }
 
 .Combo .dropbutton[status=disabled],.ComboControl .dropbutton[status=disabled]
 {
-	opacity : 0.50;
+	
+	background : #efefef;
+	-nexa-icon : url('theme://images/cmb_WF_Drop_P.png');
+	opacity : 0.5;
 }
 
-.Combo .combolist,.ComboControl .combolist
+.Combo .combolist,.Combo .combolist[status=mouseover],.ComboControl .combolist
 {
 	font : 12px "Malgun Gothic";
 	color : #555555;
-	background : red;
-	-nexa-border : 1px solid #b1b1b1;
+	-nexa-border : 1px solid #FF6400;	
+	background : #ffffff;
 }
-
 
 /* Edit */
 .Edit,.FileUpload .fileuploaditem .fileuploaditemedit
 {
 	background : #ffffff;
-	-nexa-border : 1px solid #d5d5d5;
-	-nexa-padding : 1px 9px 0px 9px;
+	-nexa-border : 1px solid #ecedee;
+	-nexa-padding : 1px 8px 0px 8px;
+	border-radius : 3px;
 }
 
 .EditControl
@@ -277,7 +281,7 @@
 
 .Edit[status=mouseover],.Edit[status=focused],.FileUpload .fileuploaditem .fileuploaditemedit[status=mouseover],.FileUpload .fileuploaditem .fileuploaditemedit[status=focused]
 {
-	-nexa-border : 1px solid #5a86cd;
+	-nexa-border : 1px solid #ff6400;
 }
 
 .Edit[status=readonly]
@@ -303,18 +307,20 @@
 /* Grid */
 .Grid
 {
-	-nexa-border : 2px solid #125dae, 1px solid #b7b1b2, 1px solid #b7b1b2, 1px solid #b7b1b2;
+	
 }
 /* head */
 .Grid .head .row .cell
 {
-	font : bold 12px "Malgun Gothic";
-	color : #2f2f2f;
-	background : linear-gradient(to top, #eff0f0, #f9fafa);
-	-nexa-border : 1px solid #cacaca;
-	-nexa-padding : 4px 4px 4px 4px;
-	-nexa-text-align : center;
+	-nexa-border : 0px none,0px none,1px solid #dbdee2;
+	font : bold 18px/normal "Malgun Gothic";
 }
+.Grid .head .row .cell.headStyle
+{
+    	color : cyan;
+}
+
+
 
 .Grid .head .row .cell[status=disabled]
 {
@@ -338,21 +344,53 @@
 /* headcelltreeitem */
 
 /* body */
-.Grid .body .row .cell
+.Grid .body .row .cell 
 {
-	color : #666666;
-	-nexa-border : 1px solid #dbdee2;
-	-nexa-padding : 4px 4px 4px 4px;
+	 color : #00000;
+	-nexa-padding : 4px 4px;
+	-nexa-border : 0px none,0px none,1px solid #dbdee2;
+	-nexa-color-odd : #000000;
+	-nexa-text-align : left;
+	font : 14px/normal "Malgun Gothic";
 }
+.Grid .body .row .cell .cellprogressbar
+{
+	
+	border-radius : 8px;
+	-nexa-border : 0px solid;
+}
+.Grid .body .row .cell .cellprogressbar .progressbaritem
+{
+	background : #2cc8ba;
+}
+.Grid .body .row .cell .cellprogressbar .progressstartcap
+{
+	
+}
+
+.Grid .body .row .cell .cellprogressbar .progressendcap
+{
+	
+}
+
+.Grid .body .row .cell .cellprogressbar .progressbartext
+{
+	color : #ffffff;
+	font : bold 12px "Times New Roman";
+	
+}
+
 
 .Grid .body .row .cell[status=mouseover]
 {
-	background : #f6f6f6;
+	background : RGB(255,247,243);
+	color : #000000 ;
 }
 
 .Grid .body .row .cell[userstatus=selected]
 {
-	background : #f2f9ff;
+	background : RGB(255,247,243);
+	color : #000000 ;
 }
 
 .Grid .body .row .cell[status=disabled]
@@ -365,7 +403,7 @@
 {
 	color : #666666;
 	-nexa-border : 1px solid #dbdee2;
-	-nexa-padding : 4px 4px 4px 4px;
+	-nexa-padding : 7px 4px;
 }
 .Grid .body .row .cell .subcell[status=mouseover]
 {
@@ -634,8 +672,8 @@
 
 .Grid .body .row .cell[userstatus=blinked]
 {
-    background : #125dae;
-	color : #ffffff;
+	background : RGB(255,247,243);
+	color : #000000 ;
 }
 
 /* GroupBox */
@@ -1065,6 +1103,7 @@
 /* Radio */
 .Radio
 {
+	
 	/* No style applied */
 }
 
@@ -1214,6 +1253,15 @@
 {
 	/* No style applied */
 }
+.Static.fz-text
+{
+	font : 13px/normal "Arial";	
+}
+
+.Static.req-field
+{
+	font : 13px/normal "Arial";	
+}
 
 .Static[status=disabled],.StaticControl[status=disabled]
 {
@@ -1225,13 +1273,14 @@
 .TextArea,.TextAreaControl
 {
 	background : #ffffff;
-	-nexa-border : 1px solid #d5d5d5;
+	-nexa-border : 1px solid #ecedee;
 	-nexa-padding : 9px 9px 9px 9px;
+	border-radius : 3px;
 }
 
 .TextArea[status=mouseover],.TextArea[status=focused],.TextAreaControl[status=mouseover],.TextAreaControl[status=focused]
 {
-	-nexa-border : 1px solid #5a86cd;
+	-nexa-border : 1px solid #ff6400;
 }
 
 .TextArea[status=readonly],.TextAreaControl[status=readonly]
@@ -1260,8 +1309,6 @@
 {
 	/* No style applied */
 }
-
-
 /* Tab */
 .Tab
 {
@@ -2034,10 +2081,10 @@
 .ListView .body .expandbar[userstatus=expand]
 {
 	-nexa-icon : URL('theme://images/btn_expand.png');
-}.Grid .body
+}.Grid .head .row
 {
-}
-.Grid .body .row
+	
+}.Grid .body .row
 {
 	-nexa-rtl-background-image : url('theme://images/btn_TF_Close.png');
 	
@@ -2197,5 +2244,43 @@
 	background : padding-box #ff6400;
 	color : #fff;
 	-nexa-border : 1px solid #16100d;
+}
+.Grid.headStyle
+{
+ background : cyan;
+}
+.ChildFrame .titlebar 
+{
+	background : #f4f4f4;
+	opacity : 0;
+}
+
+.ChildFrame
+{
+	background : #f4f4f4;
+}
+
+.ChildFrame .titlebar .titleicon 
+{
+
+}
+
+.ChildFrame .titlebar .closebutton,
+.ChildFrame .titlebar .maxbutton,
+.ChildFrame .titlebar .minbutton
+{
+	cursor : none;	
+}
+
+
+.Combo .combolist .listboxitem[status=mouseover]
+{
+	background : #FF6400;
+	color : #ffffff;
+
+}
+.Combo .combolist .listboxitem[userstatus=selected] {
+	background : #FF6400;
+	color : #ffffff;
 }
 ]]></XCSS>

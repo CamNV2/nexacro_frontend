@@ -68,9 +68,7 @@ var myObject = nexacro.getApplication();
 			menuTitle.addEventHandler("onclick", this.menuTitle_onclick, this);
 			this.addChild(objId, menuTitle);
 			menuTitle.show();
-			//menuTitle.set_background("url('imagerc::image_custom/menu.png') no-repeat left center /contain");
-			//menuTitle.set_background("url('" + urlImg + "') no-repeat left center /contain");
-		/*	menuTitle.set_icon("url('" + urlImg + "')");*/
+			
 			mainTop = objId + ":0";
 			objId = "divSubMenu_"+id;
 
@@ -134,7 +132,12 @@ this.menuButton_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 	var path = this.dsMenu.getColumn(this.dsMenu.findRow("id",obj.menuId),"path");
 	
 	nexacro.getApplication().mainframe.HFrameSet00.VFrameSet00.WorkFrame.form.fn_addTab(path);
-   
+	
+	
+//  	if(menuId == '20100') {
+//  		nexacro.getApplication().mainframe.HFrameSet00.VFrameSet00.WorkFrame.form.Div00.form.Static00.set_visible(false)
+//  		nexacro.getApplication().mainframe.HFrameSet00.VFrameSet00.WorkFrame.form.Div00.form.Div_container_prj.set_top(0);
+//  	}
 };
 
 
@@ -203,10 +206,10 @@ this.menuButton_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
           </Row>
           <Row>
             <Col id="id">10100</Col>
-            <Col id="caption">Sub menu</Col>
+            <Col id="caption">Tạo tác vụ</Col>
             <Col id="level">1</Col>
-            <Col id="upid">10000</Col>
-            <Col id="path">Base::ReportTask.xfdl</Col>
+            <Col id="upid">60000</Col>
+            <Col id="path">Base::newTask.xfdl</Col>
           </Row>
           <Row>
             <Col id="id">20100</Col>

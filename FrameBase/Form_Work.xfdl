@@ -3,7 +3,7 @@
   <Form id="Form_Work" width="1280" height="720" titletext="New Form">
     <Layouts>
       <Layout height="720" width="1280">
-        <Div id="Div00" taborder="1" left="30" top="20" right="30" bottom="112"/>
+        <Div id="Div00" taborder="1" left="10" top="20" right="10" bottom="50"/>
       </Layout>
     </Layouts>
     <Script type="xscript5.1"><![CDATA[

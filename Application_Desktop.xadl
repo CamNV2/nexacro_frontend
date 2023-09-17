@@ -9,7 +9,7 @@
             <VFrameSet id="VFrameSet00" separatesize="50,*" border="0px none" top="1">
               <Frames>
                 <ChildFrame id="TopFrame" showtitlebar="false" showstatusbar="false" formurl="FrameBase::Form_Top.xfdl" border="0px none,0px none,1px solid #ebebeb" background="" height="270"/>
-                <ChildFrame id="WorkFrame" showtitlebar="false" showstatusbar="false" formurl="FrameBase::Form_Work.xfdl" border="0px none"/>
+                <ChildFrame id="WorkFrame" showtitlebar="false" showstatusbar="false" formurl="FrameBase::Form_Work.xfdl" border="0px none" bottom="0"/>
               </Frames>
             </VFrameSet>
           </Frames>
