@@ -53,8 +53,8 @@
       </Dataset>
       <Dataset id="ds_group">
         <ColumnInfo>
-          <Column id="GROUP_ID" type="INT" size="256"/>
-          <Column id="GROUP_NM" type="STRING" size="256"/>
+          <Column id="ID" type="INT" size="256"/>
+          <Column id="Group_nm" type="STRING" size="256"/>
         </ColumnInfo>
       </Dataset>
     </Objects>

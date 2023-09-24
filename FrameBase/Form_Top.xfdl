@@ -11,7 +11,7 @@
         <Static id="Static_search" taborder="5" text="" top="17" height="15" padding="0px 0px 0px 40px" font="normal 700 14pt/normal &quot;Arial&quot;" background="url('imagerc::image_custom/search.png') no-repeat center top /15px 15px" onclick="Static00_00_onclick" right="273" width="15"/>
         <Static id="Static_add" taborder="6" text="" top="17" height="15" padding="0px 0px 0px 40px" font="normal 700 14pt/normal &quot;Arial&quot;" background="url('imagerc::image_custom/add.png') no-repeat center center /15px 15px" onclick="Static00_00_onclick" right="333" width="15"/>
       </Layout>
-      <Layout name="screen00_02" width="1080" height="50" screenid="screen00_02,Desktop_screen"/>
+      <Layout name="screen00_02" width="1080" height="50" screenid="screen00_02"/>
     </Layouts>
     <Script type="xscript5.1"><![CDATA[this.fn_test = function()
 {

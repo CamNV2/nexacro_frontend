@@ -9,7 +9,7 @@
               <Static id="login_st" taborder="0" text="LOGIN FORM" left="0" top="0" width="100.00%" height="90" textAlign="center" font="normal 700 24px/normal &quot;Malgun Gothic&quot;" color="darkorange" letterSpacing="5px" background="#4c423d"/>
               <Edit id="Edit00" taborder="1" left="86" top="130" width="62%" height="40" background="url('imagerc::image_custom/User_icon_2.svg.png') no-repeat left top /contain" textAlign="center" wordSpacing="12px" font="normal 14pt &quot;Arial&quot;" maxlength="15" borderRadius="10px"/>
               <Static id="bt_login" taborder="2" text="Login" left="86" top="307" width="59.60%" height="48" textAlign="center" font="normal 700 18px/normal &quot;Malgun Gothic&quot;" letterSpacing="5px" background="#4c423d" opacity="0.5" borderRadius="15px" color="darkorange" onclick="Div00_bt_login_onclick"/>
-              <Edit id="Edit00_00" taborder="3" left="87" top="200" width="62%" height="40" background="url('imagerc::image_custom/pw2_icon.png') no-repeat left center /contain" font="normal 14pt/normal &quot;Arial&quot;" textAlign="center" maxlength="18" borderRadius="10px" onchanged="Div00_Edit00_00_onchanged"/>
+              <Edit id="Edit00_00" taborder="3" left="87" top="200" width="62%" height="40" background="url('imagerc::image_custom/pw2_icon.png') no-repeat left center /contain" font="normal 14pt/normal &quot;Arial&quot;" textAlign="center" maxlength="18" borderRadius="10px"/>
               <Static id="bt_forgotPw" taborder="4" text="Forgot User Name / Password" left="86" top="250" width="60.04%" height="25" textAlign="center" font="normal 14px/normal &quot;Malgun Gothic&quot;" letterSpacing="3px" color="darkorange"/>
               <Static id="bt_forgotPw00" taborder="5" text="Do not have an account? / REGISTER" left="87" top="395" width="59.60%" height="36" textAlign="center" font="normal 12px/normal &quot;Malgun Gothic&quot;" letterSpacing="2px" color="darkorange"/>
             </Layout>
@@ -23,25 +23,29 @@
           <Column id="USER_LOGIN" type="STRING" size="256"/>
           <Column id="USER_PW" type="STRING" size="256"/>
         </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="USER_LOGIN">RYU</Col>
+            <Col id="USER_PW">123</Col>
+          </Row>
+        </Rows>
       </Dataset>
     </Objects>
     <Script type="xscript5.1"><![CDATA[
 this.Div00_bt_login_onclick = function(obj:nexacro.Static,e:nexacro.ClickEventInfo)
 {
-	 var userName = this.Div00.form.Edit00.value;
-	 var passWord = this.Div00.form.Edit00_00.value;
-     var id = "login";  
+	
+    var id = "getAll";  
      var url = "http://localhost:8080/login";
-     var reqDs = "dsInput = dsInput";
-     var respDs = "";
+     var reqDs = "dsInput =dsInput";
+     var respDs = "ds_tranction=IDDataset";
      var args = "";
      var callback = "received";
-     this.transaction(id, url, reqDs, respDs, args, callback, true, 0, false); 
+
+ 
+
+     this.transaction(id, url, reqDs, respDs, args, callback, true, 0, false);
 };
 ]]></Script>
-    <Bind>
-      <BindItem id="item0" compid="Div00.form.Edit00" propid="value" datasetid="dsInput" columnid="USER_LOGIN"/>
-      <BindItem id="item1" compid="Div00.form.Edit00_00" propid="value" datasetid="dsInput" columnid="USER_PW"/>
-    </Bind>
   </Form>
 </FDL>

@@ -7,7 +7,7 @@
         <Static id="Static00_00" taborder="0" left="8" top="10" width="35" onclick="Static00_00_onclick" text="" height="36" background="url('imagerc::image_custom/menu_LNC.png') no-repeat left center /contain"/>
         <Static id="Static01" taborder="1" left="45" top="13" height="28" text="LNC Projects" textAlign="center" font="normal 800 16px/normal &quot;Malgun Gothic&quot;,&quot;Algerian&quot;" padding="0px 0px 0px 15px" color="#eaffff" onclick="Div00_Div00_Static01_onclick" background="url('imagerc::image_custom/logo.png') no-repeat left center /contain" width="165"/>
       </Layout>
-      <Layout name="screen00_02" width="200" height="720" screenid="screen00_02,Desktop_screen"/>
+      <Layout name="screen00_02" width="200" height="720" screenid="screen00_02"/>
     </Layouts>
     <Script type="xscript5.1"><![CDATA[this.Form_Left_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
 {
@@ -195,14 +195,14 @@ this.menuButton_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
             <Col id="caption">Báo cáo dự án</Col>
             <Col id="level">1</Col>
             <Col id="upid">40000</Col>
-            <Col id="path">Base::Form_Report.xfdl</Col>
+            <Col id="path">FrameBase::Form_Report.xfdl</Col>
           </Row>
           <Row>
             <Col id="id">40002</Col>
             <Col id="caption">Báo cáo task</Col>
             <Col id="level">1</Col>
             <Col id="upid">40000</Col>
-            <Col id="path">Base::ReportTask.xfdl</Col>
+            <Col id="path">FrameBase::ReportTask.xfdl</Col>
           </Row>
           <Row>
             <Col id="id">50000</Col>
@@ -225,21 +225,14 @@ this.menuButton_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
             <Col id="caption">Tạo tác vụ</Col>
             <Col id="level">1</Col>
             <Col id="upid">60000</Col>
-            <Col id="path">Base::newTask.xfdl</Col>
-          </Row>
-          <Row>
-            <Col id="id">20100</Col>
-            <Col id="caption">Tạo dự án</Col>
-            <Col id="level">1</Col>
-            <Col id="upid">60000</Col>
-            <Col id="path">Base::addProject.xfdl</Col>
+            <Col id="path">FrameBase::newTask.xfdl</Col>
           </Row>
           <Row>
             <Col id="id">20200</Col>
             <Col id="caption">Thông tin dự án</Col>
             <Col id="level">1</Col>
             <Col id="upid">60000</Col>
-            <Col id="path">Base::ProjectList.xfdl</Col>
+            <Col id="path">FrameBase::ProjectList.xfdl</Col>
           </Row>
         </Rows>
       </Dataset>
