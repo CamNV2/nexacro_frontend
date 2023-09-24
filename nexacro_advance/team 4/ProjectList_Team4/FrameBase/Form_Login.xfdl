@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Form_Login" width="1280" height="720" titletext="Form_Login">
+    <Layouts>
+      <Layout width="1280" height="720" screenid="Desktop_screen">
+        <Div id="login_div" taborder="0" left="0" top="0" width="1279" height="720" cssclass="body" text="">
+          <Layouts>
+            <Layout>
+              <Static id="title" taborder="0" text="MÀN HÌNH ĐĂNG NHẬP" left="400" top="60" width="380" height="60" cssclass="main-title"/>
+              <Div id="f_login" taborder="1" text="Div00" left="300" top="150" width="593" height="425" cssclass="main-login main-center">
+                <Layouts>
+                  <Layout>
+                    <Static id="sta_nm" taborder="0" text="Tên đăng nhập" left="71" top="40" width="120" height="30" cssclass="control-label"/>
+                    <Edit id="ipt_mn" taborder="1" left="110" top="81" width="410" height="40" displaynulltext="Nhập tên đăng nhập..." cssclass="input-group"/>
+                    <Static id="sta_password" taborder="2" text="Mật khẩu" left="71" top="150" width="120" height="30" cssclass="control-label"/>
+                    <Edit id="ipt_password" taborder="3" left="110" top="190" width="410" height="40" displaynulltext="Nhập mật khẩu..." cssclass="input-group"/>
+                    <Button id="btn_login" taborder="4" text="Đăng nhập" left="70" top="280" width="451" height="40" cssclass="btn-login" onclick="login_div_f_login_btn_login_onclick"/>
+                    <Static id="sta_lnk_register" taborder="5" text="Đăng ký" left="70" top="330" width="108" height="38" cssclass="control-label"/>
+                    <Static id="lnk_fogortPassword" taborder="6" text="Quên mật khẩu ?" left="413" top="330" height="38" cssclass="control-label" right="70"/>
+                    <ImageViewer id="img_user" taborder="7" left="70" top="81" width="40" height="40" image="url('imagerc::users.png')" cssclass="img-login"/>
+                    <ImageViewer id="img_lock" taborder="8" left="70" top="190" width="40" height="40" image="url('imagerc::padlock.png')" cssclass="img-login"/>
+                  </Layout>
+                  <Layout name="Phone_screen"/>
+                </Layouts>
+              </Div>
+            </Layout>
+            <Layout name="Phone_screen"/>
+          </Layouts>
+        </Div>
+      </Layout>
+      <Layout name="Phone_screen" width="480" height="768" screenid="Phone_screen"/>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.login_div_f_login_btn_login_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	
+};
+]]></Script>
+  </Form>
+</FDL>

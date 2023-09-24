@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="fm_left" width="190" height="700" titletext="New Form" onload="fm_left_onload" border="0px solid #c7c7c7, 1px solid #c7c7c7, 0px solid #c7c7c7, 0px solid #c7c7c7">
+    <Layouts>
+      <Layout height="700" mobileorientation="landscape" width="190">
+        <Static id="Static00" taborder="0" text="Projects" left="0" top="0" height="50" width="100%" cssclass="sta_LF_title01"/>
+        <Grid id="grdMainMenu" taborder="1" left="0" top="50" height="200" autofittype="col" border="0px solid #c7c7c7, 0px solid #c7c7c7, 0px solid #c7c7c7, 0px solid #c7c7c7" binddataset="gdsMainMenu" right="0" treeinitstatus="expand,null" oncellclick="grdMainMenu_oncellclick">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="190"/>
+              </Columns>
+              <Rows>
+                <Row size="32"/>
+              </Rows>
+              <Band id="body">
+                <Cell text="bind:MENU_NAME" edittype="none" treelevel="bind:MENU_LEVEL" displaytype="text" border="0px none" textAlign="left" padding="0px 0px 0px 30px"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Grid id="grdLeft" taborder="2" left="0" top="243" width="100.00%" binddataset="gdsExtraMenu" autofittype="col" treeusecheckbox="false" cssclass="grd_LF_treeMenu" bottom="0" treeinitstatus="expand,all" oncellclick="divLeft_grdLeft_oncellclick" border="1px solid #c7c7c7, 0px solid #c7c7c7, 0px solid #c7c7c7, 0px solid #c7c7c7" treeuseline="false" treeuseimage="false">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="190"/>
+              </Columns>
+              <Rows>
+                <Row size="32"/>
+              </Rows>
+              <Band id="body">
+                <Cell text="bind:MENU_NM" displaytype="treeitemcontrol" edittype="tree" treelevel="bind:MENU_LVL" border="0px none"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+      </Layout>
+    </Layouts>
+    <Objects/>
+    <Script type="xscript5.1"><![CDATA[
+this.grdMainMenu_oncellclick = function(obj:nexacro.Grid,e:nexacro.GridClickEventInfo)
+{
+	var objDs = obj.getBindDataset();
+	
+	var sURL  = objDs.getColumn(e.row, "FORM_URL");
+	
+	nexacro.getApplication().mainframe.HFrameSet00.VFrameSet00.WorkFrame.set_formurl(sURL);
+};
+]]></Script>
+  </Form>
+</FDL>

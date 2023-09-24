@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Login" width="1200" height="900">
+    <Layouts>
+      <Layout width="1200" height="900">
+        <Div id="Div00" taborder="4" text="Div00" left="238" top="180" width="725" height="490" border="1px solid #ff8500" borderRadius="5px">
+          <Layouts>
+            <Layout>
+              <Static id="LabelTitle" left="175" top="17.96%" width="48.41%" height="13.88%" text="ĐĂNG NHẬP" font="normal 700 32px/normal &quot;Algerian&quot;" color="#ff8500" align="center middle" textAlign="center" border="none" taborder="0"/>
+              <Edit id="EditUsername" left="175" top="44.69%" width="48.41%" height="40" placeholder="Tên đăng nhập" border="none" displaynulltext="Tên đăng nhập" taborder="1"/>
+              <Edit id="EditPassword" left="175" top="56.53%" width="48.41%" height="38" placeholder="Mật khẩu" password="true" border="none" onchanged="EditPassword_onchanged" displaynulltext="Mật khẩu" taborder="2"/>
+              <Button id="BtnLogin" left="175" top="69.80%" width="48.41%" height="40" text="Đăng nhập" background="#ff8500" color="white" onclick="BtnLogin_onclick" border="none" taborder="3"/>
+            </Layout>
+          </Layouts>
+        </Div>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.EditPassword_onchanged = function(obj:nexacro.Edit,e:nexacro.ChangeEventInfo)
+{
+	
+};
+]]></Script>
+  </Form>
+</FDL>

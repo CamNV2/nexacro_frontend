@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Form_Work" width="1280" height="720" titletext="Form_Work">
+    <Layouts>
+      <Layout width="1280" height="720" screenid="Desktop_screen">
+        <Div id="login_div" taborder="0" left="0" top="0" width="1279" height="720" cssclass="body" text="">
+          <Layouts>
+            <Layout>
+              <Static id="title" taborder="0" text="MÀN HÌNH ĐĂNG KÝ" left="430" top="30" width="359" cssclass="main-title" height="40"/>
+              <Div id="f_login" taborder="1" text="Div00" left="300" top="85" width="593" cssclass="main-login main-center" bottom="40">
+                <Layouts>
+                  <Layout>
+                    <Static id="sta_nm" taborder="0" text="Tên đăng nhập" left="71" top="190" width="120" height="30" cssclass="control-label"/>
+                    <Edit id="ipt_mn" taborder="1" left="110" top="235" width="410" height="40" displaynulltext="Nhập tên đăng nhập..." cssclass="input-group"/>
+                    <Static id="sta_password" taborder="2" text="Mật khẩu" left="71" top="295" width="120" height="30" cssclass="control-label"/>
+                    <Edit id="ipt_password" taborder="3" left="110" top="335" width="410" height="40" displaynulltext="Nhập mật khẩu..." cssclass="input-group"/>
+                    <Button id="btn_register" taborder="4" text="Đăng ký" left="69" top="520" width="451" height="40" cssclass="btn-login" onclick="login_div_f_login_btn_register_onclick"/>
+                    <ImageViewer id="img_user" taborder="5" left="71" top="235" width="40" height="40" image="url('imagerc::users.png')" cssclass="img-login"/>
+                    <ImageViewer id="img_lock" taborder="6" left="71" top="335" width="40" height="40" image="url('imagerc::padlock.png')" cssclass="img-login"/>
+                    <Static id="sta_name" taborder="7" text="Họ và tên" left="71" top="10" width="120" height="30" cssclass="control-label"/>
+                    <ImageViewer id="img_user00" taborder="8" left="71" top="50" width="40" height="40" image="url('imagerc::user.png')" cssclass="img-login" onclick="login_div_f_login_img_user00_onclick"/>
+                    <Edit id="ipt_mn00" taborder="9" left="110" top="50" width="410" height="40" displaynulltext="Nhập họ và tên..." cssclass="input-group"/>
+                    <Static id="sta_email" taborder="10" text="Email" left="71" top="100" width="120" height="30" cssclass="control-label"/>
+                    <ImageViewer id="img_user01" taborder="11" left="71" top="140" width="40" height="40" image="url('imagerc::email.png')" cssclass="img-login"/>
+                    <Edit id="ipt_mn01" taborder="12" left="110" top="140" width="410" height="40" displaynulltext="Nhập địa chỉ Email..." cssclass="input-group"/>
+                    <Static id="sta_password00" taborder="13" text="Xác nhận mật khẩu" left="71" top="395" width="120" height="30" cssclass="control-label"/>
+                    <ImageViewer id="img_lock00" taborder="14" left="71" top="435" width="40" height="40" image="url('imagerc::padlock.png')" cssclass="img-login"/>
+                    <Edit id="ipt_password00" taborder="15" left="110" top="435" width="410" height="40" displaynulltext="Xác nhận mật khẩu..." cssclass="input-group"/>
+                  </Layout>
+                  <Layout name="Phone_screen"/>
+                </Layouts>
+              </Div>
+            </Layout>
+            <Layout name="Phone_screen"/>
+          </Layouts>
+        </Div>
+      </Layout>
+      <Layout name="Phone_screen" width="480" height="768" screenid="Phone_screen"/>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.login_div_f_login_btn_register_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	
+};]]></Script>
+  </Form>
+</FDL>

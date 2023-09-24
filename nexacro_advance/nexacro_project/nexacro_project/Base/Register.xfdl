@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Login" width="1280" height="720" titletext="New Form" background="linear-gradient(to right top,#1e1e1e 50%,#b47b59) #2d2d2d">
+    <Layouts>
+      <Layout height="720" mobileorientation="landscape" width="1280">
+        <Div id="Div00" taborder="5" left="395" top="155" width="45.63%" height="65.56%" text="" background="linear-gradient(to right top,#5b5b5b 30%,#b3533b) #c4c4c4" opacity="1" borderRadius="12px">
+          <Layouts>
+            <Layout>
+              <Static id="login_st" taborder="0" text="CREATE ACCOUNT" left="0" top="0" width="99.99%" height="90" textAlign="center" font="normal 700 24px/normal &quot;Malgun Gothic&quot;" color="darkorange" letterSpacing="5px" background="#4c423d"/>
+              <Static id="bt_login" taborder="1" text="Register" left="141" top="357" width="59.07%" height="48" textAlign="center" font="normal 700 18px/normal &quot;Malgun Gothic&quot;" letterSpacing="5px" background="#4c423d" opacity="0.5" borderRadius="15px" color="darkorange" onclick="Div00_bt_login_onclick"/>
+              <Edit id="tb_pw" taborder="2" left="195" top="220" width="40.58%" height="40" background="url('imagerc::image_custom/pw2_icon.png') no-repeat left center /contain" font="normal 14pt/normal &quot;Arial&quot;" textAlign="center" maxlength="18" borderRadius="10px" password="true"/>
+              <Combo id="Combo00" taborder="3" left="195" top="285" width="40.41%" height="40" innerdataset="ds_ROLE" codecolumn="role_Cd" datacolumn="role_Nm" borderRadius="10px" text="Project Manager" index="0" value="1" font="normal 700 18px/normal &quot;Malgun Gothic&quot;"/>
+              <Static id="bt_forgotPw00" taborder="4" text="LOGIN" left="152" top="429" width="54.96%" height="36" textAlign="center" font="normal 12px/normal &quot;Malgun Gothic&quot;" letterSpacing="2px" color="darkorange" onclick="Div00_bt_forgotPw00_onclick"/>
+              <Edit id="tb_usrName" taborder="5" left="195" top="165" width="40.58%" height="40" background="url('imagerc::image_custom/User_icon_2.svg.png') no-repeat left top /contain" font="normal 14pt/normal &quot;Arial&quot;" textAlign="center" maxlength="18" borderRadius="10px" onchanged="Div00_Edit00_00_00_onchanged"/>
+              <Static id="bt_forgotPw00_00_00" taborder="6" text="User Name" left="39" top="165" width="22.43%" height="36" textAlign="center" font="normal 12px/normal &quot;Malgun Gothic&quot;" letterSpacing="2px" color="darkorange" onclick="Div00_bt_forgotPw00_onclick"/>
+              <Static id="bt_forgotPw00_00_01" taborder="7" text="Password" left="39" top="215" width="22.43%" height="36" textAlign="center" font="normal 12px/normal &quot;Malgun Gothic&quot;" letterSpacing="2px" color="darkorange" onclick="Div00_bt_forgotPw00_onclick"/>
+              <Edit id="tb_name" taborder="8" left="194" top="105" width="40.58%" height="40" background="url('imagerc::image_custom/User_icon_2.svg.png') no-repeat left top /contain" font="normal 14pt/normal &quot;Arial&quot;" textAlign="center" maxlength="18" borderRadius="10px" onchanged="Div00_Edit00_00_00_onchanged"/>
+              <Static id="bt_forgotPw00_00_00_00" taborder="9" text="Name" left="30" top="109" width="22.43%" height="36" textAlign="center" font="normal 12px/normal &quot;Malgun Gothic&quot;" letterSpacing="2px" color="darkorange" onclick="Div00_bt_forgotPw00_onclick"/>
+              <Static id="bt_forgotPw00_00_00_00_00" taborder="10" text="Role" left="30" top="285" width="22.43%" height="36" textAlign="center" font="normal 12px/normal &quot;Malgun Gothic&quot;" letterSpacing="2px" color="darkorange" onclick="Div00_bt_forgotPw00_onclick"/>
+            </Layout>
+          </Layouts>
+        </Div>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_ROLE">
+        <ColumnInfo>
+          <Column id="role_Cd" type="STRING" size="256"/>
+          <Column id="role_Nm" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="role_Cd">1</Col>
+            <Col id="role_Nm">Project Manager</Col>
+          </Row>
+          <Row>
+            <Col id="role_Cd">2</Col>
+            <Col id="role_Nm">Team Lead</Col>
+          </Row>
+          <Row>
+            <Col id="role_Cd">3</Col>
+            <Col id="role_Nm">Member</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="dsRegister">
+        <ColumnInfo>
+          <Column id="USER_PW" type="STRING" size="256"/>
+          <Column id="ROLE_ID" type="STRING" size="256"/>
+          <Column id="USER_NM" type="STRING" size="256"/>
+          <Column id="USER_ID" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="USER_PW"/>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Bind>
+      <BindItem id="item0" compid="Div00.form.Edit00" propid="value" datasetid="dsInput" columnid="USER_LOGIN"/>
+      <BindItem id="item1" compid="Div00.form.tb_pw" propid="value" datasetid="dsInput" columnid="USER_PW"/>
+      <BindItem id="item2" compid="Div00.form.tb_usrName" propid="value" datasetid="dsInput" columnid="USER_PW"/>
+      <BindItem id="item3" compid="Div00.form.tb_name" propid="value" datasetid="dsInput" columnid="USER_PW"/>
+    </Bind>
+    <Script type="xscript5.1"><![CDATA[
+this.Div00_bt_login_onclick = function(obj:nexacro.Static,e:nexacro.ClickEventInfo)
+{
+	 var userName = this.Div00.form.tb_name.value;
+	 var userLogin = this.Div00.form.tb_usrName.value;
+	 var passWord = this.Div00.form.tb_pw.value;
+	 var roleCD = this.Div00.form.Combo00.value;
+	 
+	 if (!this.checkInput(userName, "Name") || !this.checkInput(userLogin, "Username") || !this.checkInput(passWord, "Password")) {
+			return;
+	 }
+	 	 
+	 this.dsRegister.setColumn(0, "USER_ID",userLogin);
+	 this.dsRegister.setColumn(0, "USER_PW", passWord);
+	 this.dsRegister.setColumn(0, "USER_NM", userName);
+	 this.dsRegister.setColumn(0, "ROLE_ID", roleCD);
+	 
+	 var id = "register";  
+     var url = "http://localhost:8080/register";
+     var reqDs = "dsRegister = dsRegister";
+     var respDs = "";
+     var args = "";
+     var callback = "received";
+     this.transaction(id, url, reqDs, respDs, args, callback, true, 0, false); 
+};
+
+this.checkInput =  function(inputValue, inputName)
+{
+	if (inputValue == null) {
+        this.alert("Please enter " + inputName);
+        return false;
+    }
+	return true;
+};
+
+this.received = function(id, code, message) {
+	if (code == 0) {
+		this.alert("Register success");
+	}else {
+		this.alert("Invalid username");
+	}
+}
+
+this.Div00_Edit00_00_00_onchanged = function(obj:nexacro.Edit,e:nexacro.ChangeEventInfo)
+{
+	
+};
+]]></Script>
+  </Form>
+</FDL>
