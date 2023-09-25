@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Form_Top" width="1080" height="50" titletext="Form_Top" border="0px none, 0px none, 1px solid #c7c7c7">
+    <Layouts>
+      <Layout width="1080" height="50" screenid="Desktop_screen">
+        <Static id="staTitle" taborder="0" text="Báo cáo" left="20" top="0" width="133" height="100%" font="bold 18px/normal &quot;Malgun Gothic&quot;,&quot;Arial Rounded MT Bold&quot;"/>
+        <Div id="divTopMenu" taborder="1" top="0" height="100%" right="0" width="320">
+          <Layouts>
+            <Layout>
+              <Static id="Static01" taborder="0" left="205" top="0" width="49" height="100.00%" cssclass="sta_RT_title02"/>
+              <Static id="Static01_00" taborder="1" left="160" top="0" width="49" height="100.00%" cssclass="sta_RT_title03"/>
+              <Static id="Static01_00_00" taborder="2" left="117" top="0" width="49" height="100.00%" cssclass="sta_RT_title04"/>
+              <Static id="staSearch" taborder="3" left="71" top="4" width="49" height="90%" cssclass="sta_RT_title05"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <ImageViewer id="imgAvatar" taborder="2" top="5" width="40" height="40" right="20" borderRadius="50%" image="url('imagerc::img_emp10.png')" stretch="fit" border="0px solid #ffffff" onclick="imgAvatar_onclick"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.imgAvatar_onclick = function(obj:nexacro.ImageViewer,e:nexacro.ClickEventInfo)
+{
+	alert("For User");
+};
+]]></Script>
+  </Form>
+</FDL>

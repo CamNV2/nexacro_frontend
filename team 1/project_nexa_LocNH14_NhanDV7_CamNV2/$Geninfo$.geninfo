@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <GenInfo version="1.1">
+    <Rule>
+      <ENV rule_version="1.05"/>
+      <ADL rule_version="1.14"/>
+      <FDL rule_version="1.04"/>
+      <XCSS rule_version="1.04"/>
+      <Script rule_version="1.02"/>
+      <GeneratorInfo rule_version="1.2"/>
+    </Rule>
+    <Info project="D:\Nexacro\FE\nexacro_advance - Copy\team 1\project_nexa_LocNH14_NhanDV7_CamNV2\" generated="C:\Users\Nhan Duong\Documents\TOBESOFT\Nexacro N\outputs\project_nexa_LocNH14\"><File url="environment.xml" checksum="20230924221358" errormsg=""/><File url="typedefinition.xml" checksum="20230924221103" errormsg=""/><File url="appvariables.xml" checksum="20230822140508" errormsg=""/><File url="_resource_\_theme_\blue\theme.xcss" checksum="20230822140512" errormsg=""/><File url="_resource_\_xcss_\theme1.xcss" checksum="20230822140526" errormsg=""/><File url="_resource_\_xcss_\stylecss.xcss" checksum="20230822140526" errormsg=""/><File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\21.0.0\nexacrolib\framework\Framework.json" checksum="20230228101658" errormsg=""/><File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\21.0.0\nexacrolib\resources\Resource.json" checksum="20230228101658" errormsg=""/><File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\21.0.0\nexacrolib\component\CompBase.json" checksum="20230228101654" errormsg=""/><File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\21.0.0\nexacrolib\component\ComComp.json" checksum="20230228101654" errormsg=""/><File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\21.0.0\nexacrolib\component\Grid.json" checksum="20230228101656" errormsg=""/><File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\21.0.0\nexacrolib\component\ListView.json" checksum="20230228101700" errormsg=""/><File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\21.0.0\nexacrolib\component\DeviceAPI.json" checksum="20230228101656" errormsg=""/><File url="Base\Login.xfdl" checksum="20230924221737" errormsg=""/><File url="Application_Desktop.xadl" checksum="20230924221249" errormsg=""/><File url="Application_Desktop_1.xadl" checksum="20230924221125" errormsg=""/><File url="FrameBase\Form_Work.xfdl" checksum="20230924221103" errormsg=""/><File url="FrameBase\Form_Left.xfdl" checksum="20230924221250" errormsg=""/><File url="FrameBase\Form_Top.xfdl" checksum="20230924221250" errormsg=""/></Info>
+  </GenInfo>
+</root>
