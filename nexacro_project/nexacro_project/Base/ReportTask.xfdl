@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="ReportTask" width="790" height="630" titletext="ReportTask" color="darkorange">
+    <Layouts>
+      <Layout width="790" height="630">
+        <Div id="Div00" taborder="1" text="Div00" left="21" top="10" width="618" height="81">
+          <Layouts>
+            <Layout>
+              <Static id="Static00" taborder="0" text="Team 2 Report Task" left="9" top="0" width="324" height="38" onclick="Static00_onclick" font="normal bold 18pt/normal &quot;normal/normal&quot;"/>
+              <Static id="Static01" taborder="1" text="By Trương Quang Tứ |      Explore Zoho Project! |      |      |      |" left="9" top="38" width="390" height="31" onclick="Div00_Static01_onclick"/>
+            </Layout>
+            <Layout name="Phone_screen"/>
+          </Layouts>
+        </Div>
+        <Static id="Static00" taborder="0" text="⎙ " left="156" top="48" width="20" height="30" font="normal bold 12pt/normal &quot;Arial&quot;" color="darkorange"/>
+        <Static id="Static01_00" taborder="2" text="✆" left="362" top="56" width="17" height="19" font="normal 12pt/normal &quot;Arial&quot;"/>
+        <Div id="Div01" taborder="3" text="Div01" left="28" top="84" height="56" background="white" boxShadow="0px 5px 5px 5px #adadad" width="730">
+          <Layouts>
+            <Layout>
+              <Static id="Static01" taborder="0" text="TRẠNG THÁI HIỆN TẠI" left="12" top="26" width="149" height="20" font="normal 9pt/normal" color="gray"/>
+              <Combo id="cmb_status" taborder="1" left="18" top="1" width="133" height="30" border="0px none" innerdataset="ds_status" codecolumn="CD" datacolumn="NM" text="Đang tiến hành" index="1" value="s2" canitemchange="Div01_cmb_status_canitemchange" font="10"/>
+              <Static id="stc_st_ico" taborder="2" text="◉" left="8" top="7" width="20" height="21" color="green" font="normal 10pt/normal &quot;Arial&quot;"/>
+            </Layout>
+            <Layout name="Phone_screen"/>
+          </Layouts>
+        </Div>
+        <Div id="Div01_00" taborder="4" text="Div01" left="30" top="160" height="56" background="white" boxShadow="0px 5px 5px 5px #adadad" width="730">
+          <Layouts>
+            <Layout>
+              <Static id="Static00" taborder="0" text="Mô Tả ✎" left="23" top="7" width="114" height="19" font="normal bold 10pt/normal &quot;Arial&quot;"/>
+              <Static id="Static01" taborder="1" text="Task owners, manager, and admins only have permission edit that task" left="16" top="26" width="394" height="24" font="normal 10px/normal"/>
+              <Static id="Static02" taborder="2" text="❱" left="10" top="10" width="10" height="13" color="coral"/>
+            </Layout>
+            <Layout name="Phone_screen"/>
+          </Layouts>
+        </Div>
+        <Div id="work_info" taborder="5" text="Div01" left="30" top="242" height="358" background="white" boxShadow="0px 5px 5px 5px #adadad" width="730">
+          <Layouts>
+            <Layout>
+              <Static id="Static00" taborder="0" text="Thông tin tác vụ" left="20" top="7" width="117" height="21" font="normal bold 10pt/normal &quot;Arial&quot;"/>
+              <Static id="Static02" taborder="1" text="❱" left="10" top="10" width="10" height="13" color="coral"/>
+              <Div id="Div00" taborder="2" text="Div00" left="15" top="33" width="700" height="28" border="0px none,0px none,1px ridge lavender">
+                <Layouts>
+                  <Layout>
+                    <Static id="Static00" taborder="0" text="Nhóm Đã liên kết" left="0" top="-5" width="105" height="30" font="normal 9pt/normal &quot;Arial&quot;" color="gray"/>
+                    <Combo id="cmb_team" taborder="1" left="160" top="-7" width="540" height="30" border="0px none" innerdataset="ds_team" codecolumn="CD" datacolumn="NM" text="" index="-1" value="" canitemchange="Div01_00_00_Div00_01_00_cmb_status_canitemchange" displaynulltext="Chọn các nhóm" color="black"/>
+                  </Layout>
+                  <Layout name="Phone_screen"/>
+                </Layouts>
+              </Div>
+              <Div id="Div00_00" taborder="3" text="Div00" left="15" top="64" width="700" height="28" border="0px none,0px none,1px ridge lavender">
+                <Layouts>
+                  <Layout>
+                    <Static id="Static00" taborder="0" text="Chủ Sở hữu" left="0" top="0" width="134" height="25" font="normal 9pt/normal &quot;Arial&quot;" color="gray"/>
+                    <Static id="Static00_00" taborder="1" left="160" top="0" width="165" height="26" font="normal 8pt/normal &quot;Arial&quot;" color="black" background="url('imagerc::avat-removebg-preview.png') no-repeat left center /contain cornsilk" borderRadius="10px 10px 10px 10px" text=""/>
+                    <Static id="Static01" taborder="2" text="Trương Quang Tứ" left="200" top="4" width="100" height="17"/>
+                    <Static id="Static02" taborder="3" text="✕" left="305" top="2" width="22" height="19" onclick="work_info_Div00_00_Static02_onclick"/>
+                  </Layout>
+                  <Layout name="Phone_screen"/>
+                </Layouts>
+              </Div>
+              <Div id="Div00_01" taborder="4" text="Div00" left="15" top="95" width="700" height="28" border="0px none,0px none,1px ridge lavender">
+                <Layouts>
+                  <Layout>
+                    <Static id="Static00" taborder="0" text="Giờ Làm việc" left="0" top="-5" width="134" height="30" font="normal 9pt/normal &quot;Arial&quot;" color="gray"/>
+                    <Combo id="Combo00" taborder="1" left="154" top="3" width="546" height="20" border="0px none" innerdataset="ds_wrkHour" codecolumn="CD" datacolumn="NM" text="1:00" index="0" value="01"/>
+                  </Layout>
+                  <Layout name="Phone_screen"/>
+                </Layouts>
+              </Div>
+              <Div id="div_status" taborder="5" text="Div00" left="15" top="124" width="330" height="35" border="0px none,0px none,1px ridge lavender">
+                <Layouts>
+                  <Layout>
+                    <Static id="Static00" taborder="0" text="Trạng thái" left="0" top="6" width="134" height="24" font="normal 9pt/normal &quot;Arial&quot;" color="gray"/>
+                    <Combo id="cmb_status" taborder="1" left="170" top="3" width="160" height="30" border="0px none" innerdataset="ds_status" codecolumn="CD" datacolumn="NM" text="Đang tiến hành" index="1" value="s2" canitemchange="Div01_00_00_Div00_01_00_cmb_status_canitemchange"/>
+                    <Static id="stc_st_ico" taborder="2" text="◉" left="160" top="9" width="20" height="21" color="green" font="normal 10pt/normal &quot;Arial&quot;"/>
+                  </Layout>
+                  <Layout name="Phone_screen"/>
+                </Layouts>
+              </Div>
+              <Div id="Div00_01_00_00" taborder="6" text="Div00" left="381" top="122" width="334" height="35" border="0px none,0px none,1px ridge lavender">
+                <Layouts>
+                  <Layout>
+                    <Static id="Static00" taborder="0" text="Ngày bắt đầu" left="5" top="8" width="134" height="22" font="normal 8pt/normal &quot;Arial&quot;" color="gray"/>
+                    <Calendar id="Calendar00" taborder="1" left="160" top="11" width="165" height="19" value="20230408" border="0px none"/>
+                  </Layout>
+                  <Layout name="Phone_screen"/>
+                </Layouts>
+              </Div>
+              <Div id="Div00_01_00_01" taborder="7" text="Div00" left="15" top="161" width="330" height="35" border="0px none,0px none,1px ridge lavender">
+                <Layouts>
+                  <Layout>
+                    <Static id="Static00" taborder="0" text="Thời hạn" left="0" top="0" width="134" height="30" font="normal 9pt/normal &quot;Arial&quot;" color="gray"/>
+                    <Calendar id="Calendar00" taborder="1" left="160" top="5" width="165" height="20" value="20230413" border="0px none"/>
+                  </Layout>
+                  <Layout name="Phone_screen"/>
+                </Layouts>
+              </Div>
+              <Div id="Div00_01_00_00_00" taborder="8" text="Div00" left="381" top="159" width="334" height="35" border="0px none,0px none,1px ridge lavender">
+                <Layouts>
+                  <Layout>
+                    <Static id="Static00" taborder="0" text="Thời lượng" left="5" top="2" width="134" height="28" font="normal 8pt/normal &quot;Arial&quot;" color="gray"/>
+                    <Combo id="cmb_ut" text="Ngày 1" left="147" top="8" width="178" height="20" value="1" index="0" border="0px none" codecolumn="codecolumn" datacolumn="datacolumn" taborder="1" innerdataset="innerdataset">
+                      <Dataset id="innerdataset">
+                        <ColumnInfo>
+                          <Column id="codecolumn" size="256"/>
+                          <Column id="datacolumn" size="256"/>
+                        </ColumnInfo>
+                        <Rows>
+                          <Row>
+                            <Col id="codecolumn">1</Col>
+                            <Col id="datacolumn">Ngày 1</Col>
+                          </Row>
+                          <Row>
+                            <Col id="datacolumn">Ngày 2</Col>
+                            <Col id="codecolumn">2</Col>
+                          </Row>
+                          <Row>
+                            <Col id="datacolumn">Ngày 3</Col>
+                            <Col id="codecolumn">3</Col>
+                          </Row>
+                          <Row>
+                            <Col id="datacolumn">Ngày 4</Col>
+                            <Col id="codecolumn">4</Col>
+                          </Row>
+                          <Row>
+                            <Col id="datacolumn">Ngày 5</Col>
+                            <Col id="codecolumn">5</Col>
+                          </Row>
+                          <Row>
+                            <Col id="datacolumn">Ngày 6</Col>
+                            <Col id="codecolumn">6</Col>
+                          </Row>
+                          <Row>
+                            <Col id="datacolumn">Ngày 7</Col>
+                            <Col id="codecolumn">7</Col>
+                          </Row>
+                          <Row>
+                            <Col id="datacolumn">Ngày 8</Col>
+                            <Col id="codecolumn">8</Col>
+                          </Row>
+                          <Row>
+                            <Col id="datacolumn">Ngày 9</Col>
+                            <Col id="codecolumn">9</Col>
+                          </Row>
+                          <Row>
+                            <Col id="datacolumn">Ngày 10</Col>
+                            <Col id="codecolumn">10</Col>
+                          </Row>
+                          <Row>
+                            <Col id="datacolumn">Ngày 11</Col>
+                            <Col id="codecolumn">11</Col>
+                          </Row>
+                        </Rows>
+                      </Dataset>
+                    </Combo>
+                  </Layout>
+                  <Layout name="Phone_screen"/>
+                </Layouts>
+              </Div>
+              <Div id="Div00_01_00_01_00" taborder="9" text="Div00" left="15" top="196" width="330" height="35" border="0px none,0px none,1px ridge lavender">
+                <Layouts>
+                  <Layout>
+                    <Static id="Static00" taborder="1" text="Ưu tiên" left="0" top="0" width="129" height="30" font="normal 9pt/normal &quot;Arial&quot;" color="gray"/>
+                    <Combo id="cmb_ut" text="Trung bình" left="147" top="8" width="178" height="20" value="H2" index="1" border="0px none" innerdataset="ds_dut" codecolumn="CD" datacolumn="NM" taborder="0"/>
+                  </Layout>
+                  <Layout name="Phone_screen"/>
+                </Layouts>
+              </Div>
+              <Div id="Div00_01_00_00_00_00" taborder="10" text="Div00" left="383" top="194" width="329" height="37" border="0px none,0px none,1px ridge lavender">
+                <Layouts>
+                  <Layout>
+                    <Static id="Static00" taborder="0" text="Phần trăm hoàn thành" left="5" top="5" width="134" height="25" font="normal 8pt/normal &quot;Arial&quot;" color="gray"/>
+                    <Combo id="cmb_ut" text="Ngày 1" left="147" top="8" width="178" height="20" value="1" index="0" border="0px none" codecolumn="codecolumn" datacolumn="datacolumn" taborder="1" innerdataset="innerdataset">
+                      <Dataset id="innerdataset">
+                        <ColumnInfo>
+                          <Column id="codecolumn" size="256"/>
+                          <Column id="datacolumn" size="256"/>
+                        </ColumnInfo>
+                        <Rows>
+                          <Row>
+                            <Col id="codecolumn">1</Col>
+                            <Col id="datacolumn">10 %</Col>
+                          </Row>
+                          <Row>
+                            <Col id="datacolumn">20 %</Col>
+                            <Col id="codecolumn">2</Col>
+                          </Row>
+                          <Row>
+                            <Col id="datacolumn">30 %</Col>
+                            <Col id="codecolumn">3</Col>
+                          </Row>
+                        </Rows>
+                      </Dataset>
+                    </Combo>
+                  </Layout>
+                  <Layout name="Phone_screen"/>
+                </Layouts>
+              </Div>
+              <Div id="Div00_01_00_01_00_00" taborder="11" text="Div00" left="15" top="233" width="701" height="30" border="0px none,0px none,1px ridge lavender" font="normal 9pt/normal &quot;Arial&quot;">
+                <Layouts>
+                  <Layout>
+                    <Static id="Static00" taborder="0" text="Tag" left="0" top="0" width="134" height="25" font="normal 8pt/normal &quot;Arial&quot;" color="gray"/>
+                    <Static id="Static00_00" taborder="1" left="160" top="0" width="60" height="26" font="normal 8pt/normal &quot;Arial&quot;" color="black" borderRadius="10px 10px 10px 10px" background="cornsilk"/>
+                    <Static id="Static01" taborder="2" text="OK" left="170" top="4" width="100" height="17"/>
+                    <Static id="Static02" taborder="3" text="✕" left="195" top="2" width="22" height="19" onclick="work_info_Div00_00_Static02_onclick"/>
+                  </Layout>
+                  <Layout name="Phone_screen"/>
+                </Layouts>
+              </Div>
+              <Div id="Div00_01_00_01_00_00_00" taborder="12" text="Div00" left="15" top="270" width="330" height="28" border="0px none,0px none,1px ridge lavender">
+                <Layouts>
+                  <Layout>
+                    <Static id="Static00" taborder="0" text="Thông báo nhắc" left="0" top="3" width="111" height="22" font="normal 9pt/normal &quot;Arial&quot;" color="gray" background="url('imagerc::Information_icon4_orange.svg.png') no-repeat right top /20px 20px"/>
+                    <Combo id="cmb_ut" text="Không có" left="147" top="0" width="178" height="25" value="M1" index="0" border="0px none" innerdataset="ds_mss" codecolumn="CD" datacolumn="NM" taborder="1"/>
+                  </Layout>
+                  <Layout name="Phone_screen"/>
+                </Layouts>
+              </Div>
+              <Div id="Div00_01_00_00_00_00_00_00" taborder="13" text="Div00" left="383" top="268" width="334" height="27" border="0px none,0px none,1px ridge lavender">
+                <Layouts>
+                  <Layout>
+                    <Static id="Static00" taborder="0" text="Tái diễn" left="5" top="5" width="134" height="20" font="normal 8pt/normal &quot;Arial&quot;" color="gray"/>
+                    <Combo id="Combo00" taborder="1" left="162" top="5" width="161" height="15" border="0px none"/>
+                  </Layout>
+                  <Layout name="Phone_screen"/>
+                </Layouts>
+              </Div>
+              <Div id="Div00_01_00_01_00_00_00_00" taborder="14" text="Div00" left="15" top="300" width="330" height="35" border="0px none,0px none,1px ridge lavender">
+                <Layouts>
+                  <Layout>
+                    <Static id="Static00" taborder="0" text="Loại hóa đơn" left="0" top="-2" width="134" height="29" font="normal 8pt/normal &quot;Arial&quot;" color="gray"/>
+                    <Combo id="cmb_ut" text="Không có" left="147" top="1" width="178" height="27" value="M1" index="0" border="0px none" innerdataset="ds_mss" codecolumn="CD" datacolumn="NM" taborder="1"/>
+                  </Layout>
+                  <Layout name="Phone_screen"/>
+                </Layouts>
+              </Div>
+            </Layout>
+            <Layout name="Phone_screen"/>
+          </Layouts>
+        </Div>
+        <ImageViewer id="ImageViewer00_00_00" taborder="6" left="392" top="57" width="15" height="15" image="url('..\image\Information_icon4_orange.svg.png')" imagealign="center middle" stretch="fit" border="0px none" tabstop="false"/>
+        <ImageViewer id="ImageViewer00_00_00_00" taborder="7" left="305" top="57" width="15" height="15" image="url('..\image\1381552.png')" imagealign="center middle" stretch="fit" border="0px none" tabstop="false"/>
+        <ImageViewer id="ImageViewer00_00_01" taborder="8" left="333" top="57" width="15" height="15" image="url('..\image\tag.png')" imagealign="center middle" stretch="fit" border="0px none" tabstop="false"/>
+      </Layout>
+      <Layout name="Phone_screen" width="480" height="768" screenid="Phone_screen"/>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.Div01_00_00_Div00_01_00_cmb_status_canitemchange = function(obj:nexacro.Combo,e:nexacro.ItemChangeEventInfo)
+{
+	switch(e.postvalue) {
+		case "s1":
+			this.work_info.form.div_status.form.stc_st_ico.set_color("gold");
+			break;
+		case "s2":
+			this.work_info.form.div_status.form.stc_st_ico.set_color("green");
+			break;
+		case "s3": 
+			this.work_info.form.div_status.form.stc_st_ico.set_color("red");
+			break;
+	}
+};
+
+this.Div01_cmb_status_canitemchange = function(obj:nexacro.Combo,e:nexacro.ItemChangeEventInfo)
+{
+	switch(e.postvalue) {
+		case "s1":
+			this.Div01.form.stc_st_ico.set_color("gold");
+			break;
+		case "s2":
+			this.Div01.form.stc_st_ico.set_color("green");
+			break;
+		case "s3": 
+			this.Div01.form.stc_st_ico.set_color("red");
+			break;
+	}
+};
+
+this.work_info_Div00_00_Static02_onclick = function(obj:nexacro.Static,e:nexacro.ClickEventInfo)
+{
+	this.work_info.form.Div00_00.form.Static01.set_visible(false);
+	this.work_info.form.Div00_00.form.Static02.set_visible(false);
+	//this.ImageViewer00.set_visible(false);
+	this.work_info.form.Div00_00.form.Static00_00.set_visible(false);
+};
+]]></Script>
+    <Objects>
+      <Dataset id="ds_wrkHour">
+        <ColumnInfo>
+          <Column id="CD" type="STRING" size="256"/>
+          <Column id="NM" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CD">01</Col>
+            <Col id="NM">1:00</Col>
+          </Row>
+          <Row>
+            <Col id="CD">02</Col>
+            <Col id="NM">2:00</Col>
+          </Row>
+          <Row>
+            <Col id="CD">03</Col>
+            <Col id="NM">3:00</Col>
+          </Row>
+          <Row>
+            <Col id="CD">04</Col>
+            <Col id="NM">4:00</Col>
+          </Row>
+          <Row>
+            <Col id="CD">05</Col>
+            <Col id="NM">5:00</Col>
+          </Row>
+          <Row>
+            <Col id="CD">06</Col>
+            <Col id="NM">6:00</Col>
+          </Row>
+          <Row>
+            <Col id="CD">07</Col>
+            <Col id="NM">7:00</Col>
+          </Row>
+          <Row>
+            <Col id="CD">08</Col>
+            <Col id="NM">8:00</Col>
+          </Row>
+          <Row>
+            <Col id="CD">09</Col>
+            <Col id="NM">9:00</Col>
+          </Row>
+          <Row>
+            <Col id="CD">10</Col>
+            <Col id="NM">10:00</Col>
+          </Row>
+          <Row>
+            <Col id="CD">11</Col>
+            <Col id="NM">11:00</Col>
+          </Row>
+          <Row>
+            <Col id="CD">12</Col>
+            <Col id="NM">12:00</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_status">
+        <ColumnInfo>
+          <Column id="CD" type="STRING" size="256"/>
+          <Column id="NM" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CD">s1</Col>
+            <Col id="NM">Open</Col>
+          </Row>
+          <Row>
+            <Col id="CD">s2</Col>
+            <Col id="NM">Đang tiến hành</Col>
+          </Row>
+          <Row>
+            <Col id="CD">s3</Col>
+            <Col id="NM">Đã Close</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_dut">
+        <ColumnInfo>
+          <Column id="CD" type="STRING" size="256"/>
+          <Column id="NM" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CD">H1</Col>
+            <Col id="NM">Cao</Col>
+          </Row>
+          <Row>
+            <Col id="CD">H2</Col>
+            <Col id="NM">Trung bình</Col>
+          </Row>
+          <Row>
+            <Col id="CD">H3</Col>
+            <Col id="NM">Thấp</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_mss">
+        <ColumnInfo>
+          <Column id="CD" type="STRING" size="256"/>
+          <Column id="NM" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CD">M1</Col>
+            <Col id="NM">Không có</Col>
+          </Row>
+          <Row>
+            <Col id="CD">M2</Col>
+            <Col id="NM">Đã Thông báo</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_team">
+        <ColumnInfo>
+          <Column id="CD" type="STRING" size="256"/>
+          <Column id="NM" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CD">T1</Col>
+            <Col id="NM">Nhóm 1</Col>
+          </Row>
+          <Row>
+            <Col id="CD">T2</Col>
+            <Col id="NM">Nhóm 2</Col>
+          </Row>
+          <Row>
+            <Col id="CD">T3</Col>
+            <Col id="NM">Nhóm 3</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="Dataset00"/>
+    </Objects>
+  </Form>
+</FDL>
